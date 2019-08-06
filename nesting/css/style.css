@@ -741,5 +741,17 @@ h4 {
 		display: block;
 		width: 100%;
 	}
+
+	.sl__image{
+		min-height:300px !important;
+	}
+
+	.sl__headline{
+		min-height:300px !important;
+	}
+	
+	.slick-list{
+		height:300px !important;
+	}
 }
 
