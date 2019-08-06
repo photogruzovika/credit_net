@@ -292,7 +292,13 @@ h4 {
 	transition: all 0.3s;
 }
 
-.icon-user2:after {
+.fa-external-link-alt:after {
+	font-size: 100px;
+	content: "\f007";
+	font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+}
+
+.user-ico:after {
 	content: "\f007";
 	font-style: normal;
 	font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
@@ -311,13 +317,6 @@ h4 {
 	font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';	
 }
 
-.icon-phone {
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	background: url(../img/phone-solid.svg);
-}
-
 .contact-form__select {
 	-webkit-appearance: none;
   -moz-appearance: none;
@@ -325,10 +324,12 @@ h4 {
 }
 
 .contact-form__button {
+	display: block;
 	min-width: 340px;
 	padding: 14px 65px 14px;
-	background: #353847;
+	margin: 20px auto 0 auto;
 
+	background: #353847;
 	color: #fff;
 	font-family: 'Open Sans', Arial, sans-serif;
 	font-size: 17px;
