@@ -1,27 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1"/>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="fontawesome/css/fontawesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/icomoon.css" />
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+	<link rel="stylesheet" type="text/css" href="slick/slick.css" />
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script src="js/vue.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script>
+    new WOW().init();
+  </script>
 	<title>card-credit</title>
 </head>
 <body>
 	<header class="page-header">
 	<div class="wrapper">
 		<div class="page-header-wrap">
-			<a href="#" class="logo"><img src="img/logo.png" alt="logo" width="114" height="31"></a>
+			<a href="#" class="logo wow fadeInLeft" data-wow-duration="1.5s">
+				<img src="img/logo.png" alt="logo" width="114" height="31">
+			</a>
 			<nav class="main-nav">
 				<button class="main-nav__toggle">
 					<span></span>
 					<span></span>
 					<span></span>
 				</button>
-				<ul class="main-nav__list">
+				<ul class="main-nav__list wow fadeInRight" data-wow-duration="1.2s">
 					<li class="main-nav__item">
-						<a href="#" class="main-nav__link">Процентная ставка</a>
+						<a href="rate.html" class="main-nav__link">Процентная ставка</a>
 					</li>
 					<li class="main-nav__item">
 						<a href="#" class="main-nav__link">Отзывы</a>
@@ -39,23 +51,46 @@
 </header>
 
 
+
+<div class="sl">
+	<div class="sl-slide">
+		<img class="sl__image" src="img/sl1.jpg" alt="Слайд 1">
+		<div class="sl__text">
+			<h3 class="sl__headline">Кредитная карта всем</h3>
+		</div>
+	</div>
+	<div class="sl-slide">
+		<img class="sl__image" src="img/sl2.jpg" alt="Слайд 2">
+		<div class="sl__text">
+			<h3 class="sl__headline">Кредитная карта с плохой кредитной историей</h3>
+		</div>
+	</div>
+	<div class="sl-slide">
+		<img class="sl__image" src="img/sl3.jpg" alt="Слайд 3">
+		<div class="sl__text">
+			<h3 class="sl__headline">Получить деньги за 5 минут</h3>
+		</div>
+	</div>
+</div>
+
+
 <section class="features">
 	<div class="wrapper">
 		<h2 class="features__headline">Удобно для бизнеса</h2>
 		<div class="features-wrap">
-			<div class="features__item">
+			<div class="features__item wow zoomIn" data-wow-duration="1.5s">
 				<div class="features__icon">
 					<i class="fa fa-external-link"></i>
 				</div>
 				<a class="features__link" href="#">Отзывы</a>
 			</div>
-			<div class="features__item">
+			<div class="features__item wow zoomIn" data-wow-duration="1.5s">
 				<div class="features__icon">
 					<i class="fa fa-user-secret"></i>
 				</div>
 				<a class="features__link" href="#">Кредитная история не важна</a>
 			</div>
-			<div class="features__item">
+			<div class="features__item wow zoomIn" data-wow-duration="1.5s">
 				<div class="features__icon">
 					<i class="fa fa-line-chart"></i>
 				</div>
@@ -66,8 +101,135 @@
 </section>
 
 
-<section class="feedback">
+<section class="request">
 	<div class="wrapper">
+		<h2 class="request__headline">Оформить заявку</h2>
+		<div class="contact-form">
+			<form action="#">
+				<div class="contact-form-wrap">
+					<div class="form-field wow fadeInLeft" data-wow-duration="1.5s">
+						<input type="text" class="contact-form__input" placeholder="Фамилия">
+						<span class="form-field__icon"><i class="icon-user2"></i></span>
+					</div>
+					<div class="form-field wow fadeInLeft" data-wow-duration="1.5s">
+						<input type="email" class="contact-form__input" placeholder="Имя">
+						<span class="form-field__icon"><span class="icon-user2"></span></span>
+					</div>
+					<div class="form-field wow fadeInRight" data-wow-duration="1.5s">
+						<input type="email" class="contact-form__input" placeholder="Отчество">
+						<span class="form-field__icon"><span class="icon-user2"></span></span>
+					</div>
+				</div>
+
+				<div class="contact-form-wrap">
+					<div class="form-field wow fadeInLeft" data-wow-duration="1.5s">
+						<select type="text" class="contact-form__input contact-form__select" placeholder="Россия">
+							<option value="ru">Россия</option>
+							<option value="ua">Украина</option>
+							<option value="by">Беларусь</option>
+							<option value="kz">Казахстан</option>
+							<option value="aw">Армения</option>
+							<option value="uz">Узбекистан</option>
+							<option value="tj">Таджикистан</option>
+							<option value>Другое</option>
+						</select>
+						<span class="form-field__icon"><span class="icon-flag"></span></span>
+					</div>
+					<div class="form-field wow fadeInLeft" data-wow-duration="1.5s"> 
+						<input type="text" class="contact-form__input" placeholder="Серия паспорта">
+						<span class="form-field__icon"><span class="address-card"></span></span>
+					</div>
+				</div>
+
+				<div class="contact-form-wrap">
+					
+					<div class="form-field wow fadeInRight" data-wow-duration="1.5s">
+						<input type="email" class="contact-form__input" placeholder="Номер паспорта">
+						<span class="form-field__icon"><span class="address-card"></span></span>
+					</div>
+					<div class="form-field wow fadeInRight" data-wow-duration="1.5s">
+						<input type="email" class="contact-form__input" placeholder="+7 (ххх) ххх-хх-хх">
+						<span class="form-field__icon"><span class="icon-phone"></span></span>
+					</div>
+				</div>
+				
+				<button class="contact-form__button wow fadeInRight"><span>Проверить</span></button>
+			</form>
+		</div>
+	</div>
+</section>
+
+<section class="comments wow zoomIn" data-wow-duratio="1.5s">
+	<div class="wrapper">
+		<h2 class="comments__headline">Отзывы</h2>
+		<div class="comments-wrap">
+			<div class="comments__item">
+				<h4 class="comments__name">11</h4>
+				<p class="comments__text">11</p>
+			</div>
+			<div class="comments__item">
+				<h4 class="comments__name">12</h4>
+				<p class="comments__text">12</p>
+			</div>
+			<div class="comments__item">
+				<h4 class="comments__name">13</h4>
+				<p class="comments__text">13</p>
+			</div>
+			<div class="comments__item">
+				<h4 class="comments__name">14</h4>
+				<p class="comments__text">14</p>
+			</div>
+			<div class="comments__item">
+				<h4 class="comments__name">15</h4>
+				<p class="comments__text">15</p>
+			</div>
+			<div class="comments__item">
+				<h4 class="comments__name">16</h4>
+				<p class="comments__text">16</p>
+			</div>
+			<div class="comments__item">
+				<h4 class="comments__name">17</h4>
+				<p class="comments__text">17</p>
+			</div>
+			<div class="comments__item">
+				<h4 class="comments__name">18</h4>
+				<p class="comments__text">18</p>
+			</div>
+			<div class="comments__item">
+				<h4 class="comments__name">19</h4>
+				<p class="comments__text">19</p>
+			</div>
+			<div class="comments__item">
+				<h4 class="comments__name">20</h4>
+				<p class="comments__text">20</p>
+			</div>
+		</div>
+		<nav class="comments__navigation">
+			<ul class="comments__pagination">
+				<li class="page-item"><a href="#" class="comments__btn comments__btn--bordered-1">Назад</a></li>
+				<li class="page-item"><a href="#" class="comments__btn">1</a></li>
+				<li class="page-item"><a href="#" class="comments__btn">2</a></li>
+				<li class="page-item"><a href="#" class="comments__btn">3</a></li>
+				<li class="page-item"><a href="#" class="comments__btn">4</a></li>
+				<li class="page-item"><a href="#" class="comments__btn comments__btn--bordered-2">Вперед</a></li>
+			</ul>
+		</nav>
+
+		<h2 class="comments__headline comments__headline--center">Оставить отзыв</h2>
+		<div class="form-field form-field--comments" data-wow-duration="1.5s">
+			<input type="name" class="comments__input" placeholder="Имя">
+			<span class="form-field__icon"><span class="icon-user2"></span></span>
+		</div>
+		<div class="form-field form-field--comments" data-wow-duration="1.5s">
+			<textarea class="form-field__textarea" name="text" placeholder="Сообщение"></textarea>
+			<span class="form-field__icon"><span class="icon-pen"></span></span>
+		</div>
+		<button class="contact-form__button contact-form__button--comments"><span>Отправить</span></button>
+	</div>
+</section>
+
+<section class="feedback">
+	<div class="wrapper wow zoomIn" data-wow-duration="1.5s">
 		<h2 class="feedback__headline">Есть вопросы?</h2>
 		<p class="feedback__offer">Введите свой Email и мы вам ответим!</p>
 		<div class="input-group">
@@ -79,7 +241,7 @@
 
 
 <section class="contact-us">
-	<div class="wrapper">
+	<div class="wrapper wow zoomIn" data-wow-duration="1.5s">
 		<h2 class="contact-us__headline">Свяжитесь с нами!</h2>
 			<ul class="socials">
 				<li class="socials__item">
@@ -103,12 +265,15 @@
 
 
 <footer class="page-footer">
-	<div class="wrapper">
+	<div class="wrapper wow zoomIn" data-wow-duration="1.5s">
 		<a class="page-footer__link" href="https://card-credit.net">https://card-credit.net</a> - 2019
-
 	</div>
 </footer>
 
+
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
 </body>
 </html>
