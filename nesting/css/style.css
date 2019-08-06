@@ -19,10 +19,11 @@ h1 {
 h2 {	
 	line-height: 100%;
 	font-size: 30px;
+	font-weight: 500;
 }
 
 h4 {
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 18px;
 }
 
@@ -163,7 +164,7 @@ h4 {
 	font-size: 50px;
 	color: #fff;
 	line-height: 100%;
-	font-weight: 500;
+	font-weight: 400;
 	text-shadow: 0 1px 2px rgba(0,0,0,.6);
 }
 
@@ -171,7 +172,7 @@ h4 {
 
 .features {
 	margin-bottom: 70px;
-	padding-top: 70px;
+	padding-top: 40px;
 }
 
 .features__headline {
@@ -240,21 +241,12 @@ h4 {
 	margin-bottom: 40px;
 }
 
-/*.contact-form-wrap {
-	display: flex;
-	justify-content: space-between;
-}
-*/
-
 .form-field {
 	position: relative;
-	display: inline-block;
-	margin-bottom: 20px;
-	margin-right: 55px;
-}
+	display: block;
+	width: 340px;
 
-.form-field:nth-child(3) {
-	margin-right: 0;
+	margin: 0 auto 20px auto;
 }
 
 .contact-form__input {
@@ -262,7 +254,7 @@ h4 {
 	padding: 0 70px 0 25px;
 	width: 340px;
 	height: 50px;
-	border: 2px solid #bbc /*#353847*/;
+	border: 2px solid #bbc;
 	background-color: #ffffff;
 	color: #808080;
 	font-family: "Open Sans";
@@ -349,7 +341,6 @@ h4 {
 }
 
 .comments__headline {
-	font-weight: bold;
 	color: #353847;
 	margin-bottom: 20px;
 }
@@ -410,7 +401,7 @@ h4 {
 
 .form-field--comments {
 	display: block;
-	margin-right: 0;
+	width: auto;
 }
 
 .comments__input {
@@ -617,11 +608,46 @@ h4 {
 	text-transform: uppercase;
 	color: #333;
 	margin-bottom: 30px;
+	font-weight: 500;
 }
 
 .rate__text {
 	font-size: 24px;
 }
+
+/*	Money	*/
+
+.money {
+	min-height: 100%;
+	padding-top: 40px;
+	margin-bottom: -170px;
+}
+
+.money__headline {
+	font-size: 36px;
+	color: #333;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 500;
+}
+
+/*	History	*/
+
+.history {
+	min-height: 100%;
+	padding-top: 40px;
+	margin-bottom: -170px;
+}
+
+.history__headline {
+	font-size: 36px;
+	color: #333;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 500;
+}
+
+
 
 /*	adaptibility	*/
 @media(min-width: 768px) {
@@ -647,18 +673,7 @@ h4 {
 	}
 }	
 
-
-/*@media(max-width: 1200px) {
-	.wrapper {
-		max-width: 1170px;
-	}
-}	
-*/
 @media(max-width: 992px) {
-	/*.wrapper {
-		max-width: 970px;
-	}*/
-
 	.page-header {
 		position: relative;
 	}
@@ -712,13 +727,16 @@ h4 {
 		margin-top: 6px;
 	}
 
+	.form-field {
+		width: 100%;
+	}
+
+	.contact-form__input {
+		width: 100%;
+	}
 }
 
 @media(max-width: 768px) {
-/*	.wrapper {
-		max-width: 750px;
-	}*/
-
 	.features-wrap {
 		flex-direction: column;
 		align-items: center;
