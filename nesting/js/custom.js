@@ -1,3 +1,5 @@
+
+
 $(function(){
 	$('.main-nav__toggle').click(function(){
         // $('.main-nav__toggle').toggleClass('main-nav__toggle--active');
@@ -28,4 +30,14 @@ $('.sl').slick({
     dots: true,
     adaptiveHeight: true,
     arrows: true
+});
+
+
+// jQuery
+$("#telephone").intlTelInput({
+    autoPlaceholder: "polite",
+    utilsScript :'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.2/js/utils.js',
+    initialCountry: "ru",
+    separateDialCode:true,
+    placeholderNumberType : 'FIXED_LINE'
 });
