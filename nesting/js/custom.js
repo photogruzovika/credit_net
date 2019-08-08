@@ -2,7 +2,6 @@
 
 $(function(){
 	$('.main-nav__toggle').click(function(){
-        // $('.main-nav__toggle').toggleClass('main-nav__toggle--active');
 		$(this).toggleClass('active')
 		$('.main-nav__list').slideToggle(400)
 	})
@@ -41,3 +40,78 @@ $("#telephone").intlTelInput({
     separateDialCode:true,
     placeholderNumberType : 'FIXED_LINE'
 });
+
+
+// Validate
+// Input fields
+const firstName = document.getElementById('firstName');
+const lastName = document.getElementById('lastName');
+const patronymic = document.getElementById('patronymic');
+const serial = document.getElementById('serial');
+const passportNum = document.getElementById('passportNum');
+const telephone = document.getElementById('telephone');
+
+// Validators
+function validateFirstName() {
+  if (checkIfEmpty(firstName)) return;
+  if (!checkIfOnlyLetters(firstName)) return;
+  return true;
+}
+function validateLastName() {
+  if (checkIfEmpty(lastName)) return;
+  if (!checkIfOnlyLetters(lastName)) return;
+  return true;
+}
+function validatePatronymic() {
+  if (checkIfEmpty(patronymic)) return;
+  if (!checkIfOnlyLetters(patronymic)) return;
+  return true;
+}
+function validateSerial() {
+  if (checkIfEmpty(serial)) return;
+  if (!checkIfOnlyLetters(serial)) return;
+  return true;
+}
+function validatePassportNumber() {
+  if (checkIfEmpty(passportNum)) return;
+  if (!checkIfOnlyLetters(passportNum)) return;
+  return true;
+}
+function validateTelephone() {
+  console.log(checkIfEmpty(telephone));
+  if (checkIfEmpty(telephone)) return;
+  if (!checkIfOnlyLetters(telephone)) return;
+  return true;
+}
+
+function checkIfEmpty(field) {
+  if (isEmpty(field.value.trim())) {   
+    
+    setInvalid(field, `Обязательное поле`);
+    return true;
+  } else {
+    
+    setValid(field);
+    return false;
+  }
+}
+
+function isEmpty(value) {
+  if (value === '') return true;
+  return false;
+}
+
+function setInvalid(field, message) {
+  el = field.nextElementSibling;
+  $(el).addClass('error__text invalid');
+  $(field).addClass('invalid-input');
+  $('div').insertAfter('div input');
+  field.nextElementSibling.innerHTML = message;
+}
+
+function setValid(field) {
+  el = field.nextElementSibling;
+  $(field).removeClass('invalid-input');
+  $(el).removeClass('error__text invalid');
+  field.nextElementSibling.innerHTML = '';
+}

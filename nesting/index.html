@@ -106,19 +106,44 @@
 	<div class="wrapper">
 		<h2 class="request__headline">Оформить заявку</h2>
 		<div class="contact-form">
-			<form action="#">
+			<form action="submit">
 				<div class="contact-form-wrap">
-					<div class="form-field wow fadeInLeft" data-wow-duration="1.5s">
-						<input type="text" class="contact-form__input" placeholder="Фамилия">
+					<div id="formF" class="form-field wow fadeInLeft" data-wow-duration="1.5s">
 						<span class="form-field__icon"><i class="fa fa-user"></i></span>
+						<input 
+							type="text" 
+							name="Last Name"
+							id="lastName"
+							class="contact-form__input" 
+							placeholder="Фамилия"
+							onfocusout="validateLastName()"
+						/>
+						<div></div>
 					</div>
 					<div class="form-field wow fadeInLeft" data-wow-duration="1.5s">
-						<input type="email" class="contact-form__input" placeholder="Имя">
+						<input 
+							type="text" 
+							name="First Name"
+							id="firstName"
+							class="contact-form__input" 
+							placeholder="Имя"
+							onfocusout="validateFirstName()"
+						/>
+						<div></div>
 						<span class="form-field__icon"><i class="fa fa-user"></i></span>
 					</div>
 					<div class="form-field wow fadeInRight" data-wow-duration="1.5s">
-						<input type="email" class="contact-form__input" placeholder="Отчество">
 						<span class="form-field__icon"><i class="fa fa-user"></i></span>
+						<input 
+							type="text" 
+							name="Patronymic"
+							id="patronymic"
+							class="contact-form__input" 
+							placeholder="Отчество"
+							onfocusout="validatePatronymic()"
+							/>
+						
+						<div></div>
 					</div>
 				</div>
 
@@ -137,23 +162,46 @@
 						<span class="form-field__icon"><i class="fa fa-flag"></i></span>
 					</div>
 					<div class="form-field wow fadeInLeft" data-wow-duration="1.5s"> 
-						<input type="text" class="contact-form__input" placeholder="Серия паспорта">
 						<span class="form-field__icon"><i class="fa fa-address-card"></i></span>
+						<input 
+							type="text" 
+							name="Serial"
+							id="serial"
+							class="contact-form__input" 
+							placeholder="Серия паспорта"
+							onfocusout="validateSerial()"
+							/>
+						<div></div>
 					</div>
 				</div>
 
 				<div class="contact-form-wrap">
 					
 					<div class="form-field wow fadeInRight" data-wow-duration="1.5s">
-						<input type="email" class="contact-form__input" placeholder="Номер паспорта">
 						<span class="form-field__icon"><i class="fa fa-address-card"></i></span>
+						<input 
+							type="email" 
+							name="Passport Number"
+							id="passportNum"
+							class="contact-form__input" 
+							placeholder="Номер паспорта"
+							onfocusout="validatePassportNumber()"
+							/>
+						<div></div>
 					</div>
 					<div class="form-field wow fadeInRight" data-wow-duration="1.5s">
-						<input type="tel" id="telephone" class="contact-form__input" >
 						<span class="form-field__icon"><span class="icon-phone"></span></span>
+						<input 
+							type="tel" 
+							name="Telephone Number"
+							id="telephone" 
+							class="contact-form__input"
+							onfocusout="validateTelephone()" 
+						/>
+						<div></div>
 					</div>
 				</div>
-				<button class="contact-form__button wow fadeInRight"><span>Проверить</span></button>
+				<button type="submit" form="database" class="contact-form__button wow fadeInRight"><span>Проверить</span></button>
 			</form>
 		</div>
 	</div>
@@ -269,6 +317,7 @@
 		<a class="page-footer__link" href="https://card-credit.net">https://card-credit.net</a> - 2019
 	</div>
 </footer>
+
 	<script src="js/intlTelInput.js"></script>
 	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="slick/slick.min.js"></script>
