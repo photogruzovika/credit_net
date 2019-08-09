@@ -25,15 +25,15 @@ function validatePatronymic() {
     return true;
 }
 function validateSerial() {
-    if (checkIfEmpty(serial) || checkIfLess(serial,4) || checkIfMore(serial,4)) return true;
+    if (!checkIfEmpty(serial) || !checkIfLess(serial,4) || !checkIfMore(serial,4)) return true;
     return false;
 }
 function validatePassportNumber() {
-    if (checkIfEmpty(passportNum) || checkIfLess(passportNum,6) || checkIfMore(passportNum,6)) return true;
+    if (!checkIfEmpty(passportNum) || !checkIfLess(passportNum,6) || !checkIfMore(passportNum,6)) return true;
     return false;
 }
 function validateTelephone() {
-    if (checkIfEmpty(telephone) || checkIfLess(passportNum,10) || checkIfMore(passportNum,11)) return true;
+    if (!checkIfEmpty(telephone) || !checkIfLess(passportNum,10) || !checkIfMore(passportNum,11)) return true;
     return false;
 }
 
