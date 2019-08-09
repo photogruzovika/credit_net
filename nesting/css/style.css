@@ -27,6 +27,10 @@ h4 {
 	font-size: 18px;
 }
 
+.visually-hidden {
+	display: none;
+}
+
 /* Header */
 
 .page-header {
@@ -312,7 +316,7 @@ h4 {
 }
 
 .invalid-input {
-	border-color: #D54242;
+	border-color: #bd2e2e;
 	transition: .5s;
 }
 
@@ -689,6 +693,71 @@ h4 {
 	text-transform: uppercase;
 	text-align: center;
 	font-weight: 500;
+}
+
+
+/*	Check	*/
+
+.check {
+	padding-top: 50px;
+	min-height: 100vh;
+}
+
+.check__progress {
+	display: none;
+	margin-top: 20px;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 16px;
+	text-align: center;
+}
+
+.fa-check {
+	color: green;
+	margin-left: 20px;
+}
+
+.progress-text {
+	font-family: 'Open Sans';
+	font-size: 16px;
+}
+
+.check__name {
+	margin-bottom: 10px;
+
+	text-align: center;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 20px;
+}
+
+.check__btn {
+	display: none;
+	max-width: 270px;
+	margin: 30px auto 0 auto;
+	padding: 14px 65px 14px;
+	
+	border: none;
+	background: #353847;
+	
+	text-align: center;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 17px;
+	color: #fff;
+}
+
+.check__btn:hover {
+	background-color: #22ddbc;
+	color: #000;
+}
+
+.contact-form__button--check {
+	margin-left: 100px;
+	min-width: 30px;
+	opacity:0.5;
+	padding: 10px 40px 10px;
+}
+
+svg {
+	border-radius: 20px;
 }
 
 
