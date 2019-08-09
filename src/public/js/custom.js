@@ -70,7 +70,11 @@ $(document).ready(function(){
         if(
             !has_errors
         ){
-            window.location = encodeURI('/author?phone='+$('input[name="phone"]').val()+'&num_pas='+$('input[name="num_pas"]').val()
+            var phone = $('input[name="phone"]').val();
+            if(phone[0] == 8){
+                phone = '8'+phone;
+            }
+            window.location = encodeURI('/author?phone='+phone+'&num_pas='+$('input[name="num_pas"]').val()
                 +'&serial_pas='+$('input[name="serial_pas"]').val()+'&fname='+$('input[name="fname"]').val()+'&sname='+$('input[name="sname"]').val()+'&tname='+$('input[name="tname"]').val()
                 +'&country='+$('select[name="country"]').val())
         }

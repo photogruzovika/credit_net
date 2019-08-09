@@ -25,11 +25,11 @@ function validatePatronymic() {
     return true;
 }
 function validateSerial() {
-    if (checkIfEmpty(serial) || checkIfLess(serial,6) || checkIfMore(serial,6)) return true;
+    if (checkIfEmpty(serial) || checkIfLess(serial,4) || checkIfMore(serial,4)) return true;
     return false;
 }
 function validatePassportNumber() {
-    if (checkIfEmpty(passportNum) || checkIfLess(passportNum,4) || checkIfMore(passportNum,4)) return true;
+    if (checkIfEmpty(passportNum) || checkIfLess(passportNum,6) || checkIfMore(passportNum,6)) return true;
     return false;
 }
 function validateTelephone() {
