@@ -66,6 +66,7 @@ $(document).ready(function(){
             || validatePassportNumber()
             || validateTelephone()){
             has_errors = true;
+            console.log(1);
         }
         if(
             !has_errors
