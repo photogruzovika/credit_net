@@ -33,7 +33,7 @@ function validatePassportNumber() {
     return false;
 }
 function validateTelephone() {
-    if (checkIfEmpty(telephone) || checkIfLess(passportNum,11) || checkIfMore(passportNum,11)) return true;
+    if (checkIfEmpty(telephone) || checkIfLess(passportNum,10) || checkIfMore(passportNum,11)) return true;
     return false;
 }
 
