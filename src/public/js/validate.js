@@ -13,57 +13,81 @@ const telephone = document.getElementById('telephone');
 
 // Validators
 function validateFirstName() {
-  if (checkIfEmpty(firstName)) return;
-  return true;
+    if (checkIfEmpty(firstName)) return false;
+    return true;
 }
 function validateLastName() {
-  if (checkIfEmpty(lastName)) return;
-  return true;
+    if (checkIfEmpty(lastName)) return false;
+    return true;
 }
 function validatePatronymic() {
-  if (checkIfEmpty(patronymic)) return;
-  return true;
+    if (checkIfEmpty(patronymic)) return false;
+    return true;
 }
 function validateSerial() {
-  if (checkIfEmpty(serial)) return;
-  return true;
+    if (checkIfEmpty(serial) || checkIfLess(serial,6) || checkIfMore(serial,6)) return true;
+    return false;
 }
 function validatePassportNumber() {
-  if (checkIfEmpty(passportNum)) return;
-  return true;
+    if (checkIfEmpty(passportNum) || checkIfLess(passportNum,4) || checkIfMore(passportNum,4)) return true;
+    return false;
 }
 function validateTelephone() {
-  if (checkIfEmpty(telephone)) return;
-  return true;
+    if (checkIfEmpty(telephone) || checkIfLess(passportNum,11) || checkIfMore(passportNum,11)) return true;
+    return false;
+}
+
+function checkIfLess(field, much) {
+    if (field.value.trim().length < much) {
+
+        setInvalid(field, `Слишком короткое`);
+        return true;
+    } else {
+
+        setValid(field);
+        return false;
+    }
+}
+
+function checkIfMore(field, much) {
+    if (field.value.trim().length > much) {
+
+        setInvalid(field, `Слишком длинное`);
+        return true;
+    } else {
+
+        setValid(field);
+        return false;
+    }
 }
 
 function checkIfEmpty(field) {
-  if (isEmpty(field.value.trim())) {   
-    
-    setInvalid(field, `Обязательное поле`);
-    return true;
-  } else {
-    
-    setValid(field);
-    return false;
-  }
+    if (isEmpty(field.value.trim())) {
+
+        setInvalid(field, `Обязательное поле`);
+        return true;
+    } else {
+
+        setValid(field);
+        return false;
+    }
 }
 
 function isEmpty(value) {
-  if (value === '') return true;
-  return false;
+    if (value === '') return true;
+    return false;
 }
 
 function setInvalid(field, message) {
-  el = field.nextElementSibling;
-  $(el).addClass('error__text invalid');
-  $(field).addClass('invalid-input');
-  field.nextElementSibling.innerHTML = message;
+    el = field.nextElementSibling;
+    $(el).addClass('error__text invalid');
+    $(field).addClass('invalid-input');
+    field.nextElementSibling.innerHTML = message;
 }
 
 function setValid(field) {
-  el = field.nextElementSibling;
-  $(field).removeClass('invalid-input');
-  $(el).removeClass('error__text invalid');
-  field.nextElementSibling.innerHTML = '';
+    el = field.nextElementSibling;
+    $(field).removeClass('invalid-input');
+    $(el).removeClass('error__text invalid');
+    field.nextElementSibling.innerHTML = '';
 }

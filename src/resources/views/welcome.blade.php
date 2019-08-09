@@ -54,21 +54,45 @@
 <section class="request">
     <div class="wrapper">
         <h2 class="request__headline">Оформить заявку</h2>
-        <div class="contact-form">
-                <div class="contact-form-wrap">
-                    <div class="form-field wow fadeInLeft" data-wow-duration="1.5s">
-                        <input type="text" class="contact-form__input" name="sname" placeholder="Фамилия">
-                        <span class="form-field__icon"><i class="fa fa-user"></i></span>
-                    </div>
-                    <div class="form-field wow fadeInLeft" data-wow-duration="1.5s">
-                        <input type="email" class="contact-form__input" name="fname" placeholder="Имя">
-                        <span class="form-field__icon"><i class="fa fa-user"></i></span>
-                    </div>
-                    <div class="form-field wow fadeInRight" data-wow-duration="1.5s">
-                        <input type="email" class="contact-form__input" name="tname" placeholder="Отчество">
-                        <span class="form-field__icon"><i class="fa fa-user"></i></span>
-                    </div>
+            <div class="contact-form">
+                <div id="formF" class="form-field wow fadeInLeft" data-wow-duration="1.5s">
+                    <span class="form-field__icon"><i class="fa fa-user"></i></span>
+                    <input
+                        type="text"
+                        name="sname"
+                        id="lastName"
+                        class="contact-form__input"
+                        placeholder="Фамилия"
+                        onfocusout="validateLastName()"
+                    />
+                    <div></div>
                 </div>
+                <div class="form-field wow fadeInLeft" data-wow-duration="1.5s">
+                    <input
+                        type="text"
+                        name="fname"
+                        id="firstName"
+                        class="contact-form__input"
+                        placeholder="Имя"
+                        onfocusout="validateFirstName()"
+                    />
+                    <div></div>
+                    <span class="form-field__icon"><i class="fa fa-user"></i></span>
+                </div>
+                <div class="form-field wow fadeInRight" data-wow-duration="1.5s">
+                    <span class="form-field__icon"><i class="fa fa-user"></i></span>
+                    <input
+                        type="text"
+                        name="tname"
+                        id="patronymic"
+                        class="contact-form__input"
+                        placeholder="Отчество"
+                        onfocusout="validatePatronymic()"
+                    />
+
+                    <div></div>
+                </div>
+            </div>
 
                 <div class="contact-form-wrap">
                     <div class="form-field wow fadeInLeft" data-wow-duration="1.5s">
@@ -85,20 +109,43 @@
                         <span class="form-field__icon"><i class="fa fa-flag"></i></span>
                     </div>
                     <div class="form-field wow fadeInLeft" data-wow-duration="1.5s">
-                        <input type="text" class="contact-form__input" name="serial_pas" placeholder="Серия паспорта">
                         <span class="form-field__icon"><i class="fa fa-address-card"></i></span>
+                        <input
+                            type="text"
+                            name="serial_pas"
+                            id="serial"
+                            class="contact-form__input"
+                            placeholder="Серия паспорта"
+                            onfocusout="validateSerial()"
+                        />
+                        <div></div>
                     </div>
                 </div>
 
                 <div class="contact-form-wrap">
 
                     <div class="form-field wow fadeInRight" data-wow-duration="1.5s">
-                        <input type="text" class="contact-form__input" name="num_pas"  placeholder="Номер паспорта">
                         <span class="form-field__icon"><i class="fa fa-address-card"></i></span>
+                        <input
+                            type="text"
+                            name="num_phone"
+                            id="passportNum"
+                            class="contact-form__input"
+                            placeholder="Номер паспорта"
+                            onfocusout="validatePassportNumber()"
+                        />
+                        <div></div>
                     </div>
                     <div class="form-field wow fadeInRight" data-wow-duration="1.5s">
-                        <input type="tel" id="telephone" name="phone" class="contact-form__input" >
                         <span class="form-field__icon"><span class="icon-phone"></span></span>
+                        <input
+                            type="tel"
+                            name="photos"
+                            id="telephone"
+                            class="contact-form__input"
+                            onfocusout="validateTelephone()"
+                        />
+                        <div></div>
                     </div>
                 </div>
                 <button class="contact-form__button wow fadeInRight" id="request_accept"><span>Проверить</span></button>

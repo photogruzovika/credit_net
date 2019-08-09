@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d123496338d4500f915041d00a006242",
+    "content-hash": "c45045c1f257f8cfc45ae2a63c7e1480",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -4536,16 +4536,16 @@
         },
         {
             "name": "laracasts/generators",
-            "version": "dev-master",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laracasts/Laravel-5-Generators-Extended.git",
-                "reference": "9c6066252b9181b61e0ab6f5361fbf508bc78313"
+                "reference": "bf6aa824698516cb6e22f63f275e8f73bd25f56b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laracasts/Laravel-5-Generators-Extended/zipball/9c6066252b9181b61e0ab6f5361fbf508bc78313",
-                "reference": "9c6066252b9181b61e0ab6f5361fbf508bc78313",
+                "url": "https://api.github.com/repos/laracasts/Laravel-5-Generators-Extended/zipball/bf6aa824698516cb6e22f63f275e8f73bd25f56b",
+                "reference": "bf6aa824698516cb6e22f63f275e8f73bd25f56b",
                 "shasum": ""
             },
             "require": {
@@ -4583,7 +4583,7 @@
                 "generators",
                 "laravel"
             ],
-            "time": "2018-05-07T06:29:34+00:00"
+            "time": "2017-11-14T20:43:22+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -6075,9 +6075,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "laracasts/generators": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

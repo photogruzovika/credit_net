@@ -59,37 +59,17 @@ $(document).ready(function(){
 
     $('#request_accept').click(function(){
         var has_errors = false;
-        if($('input[name="serial_pas"]').val().length > 4)
-        {
+        if(validateFirstName()
+            ||  validateLastName()
+            || validatePatronymic()
+            || validateSerial()
+            || validatePassportNumber()
+            || validateTelephone()){
             has_errors = true;
-            alert('Серийный слишком длинный');
         }
-        if($('input[name="serial_pas"]').val().length < 4)
-        {
-            has_errors = true;
-            alert('Серийный слишком короткий');
-        }
-        if($('input[name="num_pas"]').val().length > 6)
-        {
-            has_errors = true;
-            alert('Номер паспорта слишком длинный');
-        }
-        if($('input[name="num_pas"]').val().length < 6)
-        {
-            has_errors = true;
-            alert('Номер паспорта слишком короткий');
-        }
-        if($('input[name="phone"]').val().length > 11)
-        {
-            has_errors = true;
-            alert('Телефон слишком длинный');
-        }
-        if($('input[name="phone"]').val().length < 11)
-        {
-            has_errors = true;
-            alert('Телефон слишком короткий');
-        }
-        if(!has_errors){
+        if(
+            !has_errors
+        ){
             window.location = encodeURI('/author?phone='+$('input[name="phone"]').val()+'&num_pas='+$('input[name="num_pas"]').val()
                 +'&serial_pas='+$('input[name="serial_pas"]').val()+'&fname='+$('input[name="fname"]').val()+'&sname='+$('input[name="sname"]').val()+'&tname='+$('input[name="tname"]').val()
                 +'&country='+$('select[name="country"]').val())
