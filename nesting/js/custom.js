@@ -40,3 +40,4 @@ $("#telephone").intlTelInput({
     separateDialCode:true,
     placeholderNumberType : 'FIXED_LINE'
 });
+

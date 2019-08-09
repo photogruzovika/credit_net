@@ -22,12 +22,13 @@
                     <a class="comments__btn" id="4_but" onclick="changePrice(4);"
                        style="cursor:pointer;">200 000 ₽</a>
                 </li>
-                <button class="contact-form__button wow fadeInRight" style="    padding: 10px 50px 10px;"><span>Продолжить</span></button>
+                <button class="contact-form__button wow fadeInRight" style="    padding: 10px 50px 10px;" onclick="nextPage();"><span>Продолжить</span></button>
 
             </div>
         </div>
 
     </section>
+
     <div id="app" style="margin-top: 50px;">
         <reviews rews="{{$reviews}}"></reviews>
     </div>

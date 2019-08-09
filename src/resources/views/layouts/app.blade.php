@@ -13,10 +13,14 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUQRPhKgYtyccVVeOdsco5QwI_pT4OoCg&libraries=places"></script>
 
-    <script src="https://kit.fontawesome.com/25759144a8.js"></script>
+    @if(isset($mainPage))
+        <script src="https://use.fontawesome.com/45f4a7cac2.js"></script>
+
+    @else
+        <script src="https://kit.fontawesome.com/25759144a8.js"></script>
+
+    @endif
     <script src="js/progressbar.min.js"></script>
-    <script src="https://use.fontawesome.com/45f4a7cac2.js"></script>
-    <script src="js/vue.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
         new WOW().init();
@@ -63,11 +67,29 @@
         <a class="page-footer__link" href="https://card-credit.net">https://card-credit.net</a> - 2019
     </div>
 </footer>
-<script src="js/intlTelInput.js"></script>
+@if(!isset($notTel))
+    <script src="js/intlTelInput.js"></script>
+@endif
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
+@if(!isset($notTel))
 <script src="js/intlTelInput-jquery.js"></script>
-<script type="text/javascript" src="js/custom.js"></script>
+@endif
+<script>
+    // jQuery
+    $("#telephone").intlTelInput({
+        autoPlaceholder: "polite",
+        utilsScript :'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.2/js/utils.js',
+        initialCountry: "ru",
+        separateDialCode:true,
+        placeholderNumberType : 'FIXED_LINE'
+    });
+</script>
 <script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/checking.js"></script>
+<script type="text/javascript" src="js/validate.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<script type="text/javascript" src="js/custom.js"></script>
+
 </body>
 </html>

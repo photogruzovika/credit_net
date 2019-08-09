@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index(Request $request){
         $reviews = Review::where('from','=',$request->ip())->orWhere('from','=','all')->orderBy('id','desc')->get()->toArray();
-        return view('welcome',['reviews'=>json_encode($reviews)]);
+        return view('welcome',['reviews'=>json_encode($reviews),'mainPage' => 1]);
     }
 
     public function add_email(Request $request){

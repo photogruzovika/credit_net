@@ -23,25 +23,19 @@ $(function () {
     });
 });
 
-$('.sl').slick({
-    appendArrows: $('.sl'),
-    prevArrow: '<button id="prev" type="button" class="sl__arrow prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>',
-    nextArrow: '<button id="next" type="button" class="sl__arrow next"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>',
-    dots: true,
-    adaptiveHeight: true,
-    arrows: true
-});
 
 
-// jQuery
-$("#telephone").intlTelInput({
-    autoPlaceholder: "polite",
-    utilsScript :'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.2/js/utils.js',
-    initialCountry: "ru",
-    separateDialCode:true,
-    placeholderNumberType : 'FIXED_LINE'
-});
 
+if(window.location.pathname == '/'){
+    $('.sl').slick({
+        appendArrows: $('.sl'),
+        prevArrow: '<button id="prev" type="button" class="sl__arrow prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>',
+        nextArrow: '<button id="next" type="button" class="sl__arrow next"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>',
+        dots: true,
+        adaptiveHeight: true,
+        arrows: true
+    });
+}
 
 $(document).ready(function(){
     $.ajaxSetup({
@@ -103,15 +97,7 @@ $(document).ready(function(){
     });
 
 });
-var lineBar = new ProgressBar.Line("#line-container", {
-    strokeWidth: 4,
-    trailWidth: 0.5,
-    from: { color: "#FF9900" },
-    to: { color: "#00FF99" },
-    step: (state, shape) => {
-        shape.path.setAttribute("stroke", state.color);
-    }
-});
+
 $(document).ready(function(){
     lineBar.animate(1, {
         duration: 10000
@@ -120,4 +106,23 @@ $(document).ready(function(){
 function changePrice(num) {
     $('.comments__btn').removeClass('active');
     $('#'+num+'_but').addClass('active');
+    window.price = num;
+}
+function nextPage(){
+    axios.post('/ajax/save_sum',{price:$('#'+num+'_but').val()}).then((data)=>{
+        if(data.data == 'ok'){
+            window.location = '/from';
+        }else{
+            alert('системная ошибка');
+        }
+    });
+}
+function nextReference(){
+    axios.post('/ajax/save_from',{country:$('select[name="country"]').val(),city:$('input[name="city"]').val(),address:$('input[name="address"]').val()}).then((data)=>{
+        if(data.data == 'ok'){
+            window.location = '/reference';
+        }else{
+            alert('системная ошибка');
+        }
+    });
 }

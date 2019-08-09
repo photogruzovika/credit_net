@@ -17,6 +17,8 @@ Route::get('/money', function(){
 });
 Route::get('/checking', 'CheckingController@index');
 Route::get('/choose', 'SumController@index');
+Route::post('/ajax/save_sum', 'SumController@save_sum');
+Route::post('/ajax/save_from', 'WhereController@save_from');
 Route::get('/sms', 'SmsController@index');
 Route::get('/update_sms', 'SmsController@update_sms');
 Route::get('/from', 'WhereController@index');

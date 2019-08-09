@@ -27,6 +27,10 @@ h4 {
 	font-size: 18px;
 }
 
+.visually-hidden {
+	display: none;
+}
+
 /* Header */
 
 .page-header {
@@ -268,8 +272,52 @@ h4 {
 	border-color: #22ddbc;
 }
 
-.contact-form__input:focus + .form-field__icon {
+.contact-form__input:focus .form-field > .form-field__icon {
 	color: #22ddbc;
+}
+
+.invalid {
+	/*display: block;
+	font-size: 14px;
+	line-height: 1.3em;
+	color: #e94242;
+	margin: 6px 0 0 0;*/
+	position: absolute;
+	top: 50%;
+	right: -150px;
+	width: 125px;
+	padding: 8px;
+	border-radius: 4px 4px 4px 4px;
+
+	font: 14px 'Open Sans', Arial, sans-serif;
+	text-transform: none;
+	text-align: center;
+	color: #fff;
+	background-color: #2f323f;
+
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-animation-name: scaleIn;
+	-webkit-animation-duration: 1s;
+	animation-name: scaleIn;
+	animation-duration: 1s;
+}
+
+.invalid:after {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	position: absolute;
+	border-color: hsla(38,6%,39%,0);
+	border-right-color: #2f323f;
+	border-width: 5px;
+	margin-top: -5px;
+}
+
+.invalid-input {
+	border-color: #bd2e2e;
+	transition: .5s;
 }
 
 .form-field__icon {
@@ -648,6 +696,71 @@ h4 {
 }
 
 
+/*	Check	*/
+
+.check {
+	padding-top: 50px;
+	min-height: 100vh;
+}
+
+.check__progress {
+	display: none;
+	margin-top: 20px;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 16px;
+	text-align: center;
+}
+
+.fa-check {
+	color: green;
+	margin-left: 20px;
+}
+
+.progress-text {
+	font-family: 'Open Sans';
+	font-size: 16px;
+}
+
+.check__name {
+	margin-bottom: 10px;
+
+	text-align: center;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 20px;
+}
+
+.check__btn {
+	display: none;
+	max-width: 270px;
+	margin: 30px auto 0 auto;
+	padding: 14px 65px 14px;
+	
+	border: none;
+	background: #353847;
+	
+	text-align: center;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 17px;
+	color: #fff;
+}
+
+.check__btn:hover {
+	background-color: #22ddbc;
+	color: #000;
+}
+
+.contact-form__button--check {
+	margin-left: 100px;
+	min-width: 30px;
+	opacity:0.5;
+	padding: 10px 40px 10px;
+}
+
+svg {
+	border-radius: 20px;
+}
+
+
 
 /*	adaptibility	*/
 @media(min-width: 768px) {
@@ -808,13 +921,8 @@ h4 {
 	}
 }
 
-.active{
-    z-index: 2;
-    color: #fff;
-    cursor: default;
-    background-color: #337ab7;
-    border-color: #337ab7;
-}
+.active{ z-index: 2; color: #fff; cursor: default; background-color: #337ab7; border-color: #337ab7; }
+
 /*!!!*/
 /*!!!*/
 /*!!!*/
