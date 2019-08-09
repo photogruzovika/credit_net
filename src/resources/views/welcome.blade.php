@@ -128,7 +128,7 @@
                         <span class="form-field__icon"><i class="fa fa-address-card"></i></span>
                         <input
                             type="text"
-                            name="num_phone"
+                            name="num_pas"
                             id="passportNum"
                             class="contact-form__input"
                             placeholder="Номер паспорта"
@@ -140,7 +140,7 @@
                         <span class="form-field__icon"><span class="icon-phone"></span></span>
                         <input
                             type="tel"
-                            name="photos"
+                            name="phone"
                             id="telephone"
                             class="contact-form__input"
                             onfocusout="validateTelephone()"

@@ -82,12 +82,16 @@ function setInvalid(field, message) {
     el = field.nextElementSibling;
     $(el).addClass('error__text invalid');
     $(field).addClass('invalid-input');
-    field.nextElementSibling.innerHTML = message;
+    if(field.nextElementSibling != undefined){
+        field.nextElementSibling.innerHTML = message;
+    }
 }
 
 function setValid(field) {
     el = field.nextElementSibling;
     $(field).removeClass('invalid-input');
     $(el).removeClass('error__text invalid');
-    field.nextElementSibling.innerHTML = '';
+    if(field.nextElementSibling != undefined){
+        field.nextElementSibling.innerHTML = '';
+    }
 }
