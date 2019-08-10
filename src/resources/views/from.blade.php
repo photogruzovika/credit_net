@@ -30,10 +30,7 @@
                     <input type="text" class="contact-form__input"  id="address" name="address" placeholder="Адрес">
                     <span class="form-field__icon"><i class="fa fa-address-card"></i></span>
                 </div>
-                <div class="form-field wow fadeInRight" data-wow-duration="1.5s">
-                    <input type="tel" id="telephone" class="contact-form__input" >
-                    <span class="form-field__icon"><span class="icon-phone"></span></span>
-                </div>
+
             </div>
             <button class="contact-form__button wow fadeInRight" style="    padding: 10px 50px 10px;" onclick="nextReference();"><span>Продолжить</span></button>
 
