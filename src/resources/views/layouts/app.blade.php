@@ -74,6 +74,8 @@
 @if(!isset($notTel))
 <script src="js/intlTelInput-jquery.js"></script>
 @endif
+@if(!isset($notTel))
+
 <script>
     // jQuery
     $("#telephone").intlTelInput({
@@ -84,12 +86,14 @@
         placeholderNumberType : 'FIXED_LINE'
     });
 </script>
+@endif
+
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/checking.js"></script>
 <script type="text/javascript" src="js/validate.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>
-
+@if(!isset($notCust))
 <script type="text/javascript" src="js/custom.js"></script>
-
+@endif
 </body>
 </html>

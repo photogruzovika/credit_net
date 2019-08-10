@@ -5,7 +5,7 @@
         <div class="wrapper">
             <div class="rate-wrap wow zoomIn" data-wow-duration="1s">
                 <h1 class="rate__headline"><b>Выбор суммы</b></h1>
-                <p class="rate__text">Здравствуйте <span style="color:green;">qwer qwer</span>! Вы успешно подтвердили свои данные, Вам одобрена кредитная карта на сумму <span style="color:green;">200 000</span> рублей</p>
+                <p class="rate__text">Здравствуйте <span style="color:green;">{{$fname.' '.$sname}}</span>! Вы успешно подтвердили свои данные, Вам одобрена кредитная карта на сумму <span style="color:green;">200 000</span> рублей</p>
                 <img src="img/card.jpeg" style="    width: 100%;
     height: 100%;
     display: block;

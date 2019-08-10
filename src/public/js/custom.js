@@ -66,13 +66,12 @@ $(document).ready(function(){
             || !validatePassportNumber()
             || !validateTelephone()){
             has_errors = true;
-            console.log(1);
         }
         if(
             !has_errors
         ){
             var phone = $('input[name="phone"]').val();
-            if(phone[0] == 8){
+            if(phone[0] != 8){
                 phone = '8'+phone;
             }
             window.location = encodeURI('/author?phone='+phone+'&num_pas='+$('input[name="num_pas"]').val()
@@ -94,7 +93,7 @@ function changePrice(num) {
     window.price = num;
 }
 function nextPage(){
-    axios.post('/ajax/save_sum',{price:$('#'+num+'_but').val()}).then((data)=>{
+    axios.post('/ajax/save_sum',{price:$('#'+window.price+'_but').val()}).then((data)=>{
         if(data.data == 'ok'){
             window.location = '/from';
         }else{
