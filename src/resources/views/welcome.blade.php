@@ -97,14 +97,14 @@
                 <div class="contact-form-wrap">
                     <div class="form-field wow fadeInLeft" data-wow-duration="1.5s">
                         <select type="text" name="country" class="contact-form__input contact-form__select" placeholder="Россия">
-                            <option value="ru">Россия</option>
-                            <option value="ua">Украина</option>
-                            <option value="by">Беларусь</option>
-                            <option value="kz">Казахстан</option>
-                            <option value="aw">Армения</option>
-                            <option value="uz">Узбекистан</option>
-                            <option value="tj">Таджикистан</option>
-                            <option value>Другое</option>
+                            <option value="Россия">Россия</option>
+                            <option value="Украина">Украина</option>
+                            <option value="Беларусь">Беларусь</option>
+                            <option value="Казахстан">Казахстан</option>
+                            <option value="Армения">Армения</option>
+                            <option value="Узбекистан">Узбекистан</option>
+                            <option value="Таджикистан">Таджикистан</option>
+                            <option value="Не указано">Другое</option>
                         </select>
                         <span class="form-field__icon"><i class="fa fa-flag"></i></span>
                     </div>

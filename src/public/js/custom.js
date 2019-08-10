@@ -93,7 +93,7 @@ function changePrice(num) {
     window.price = num;
 }
 function nextPage(){
-    axios.post('/ajax/save_sum',{price:$('#'+window.price+'_but').val()}).then((data)=>{
+    axios.post('/ajax/save_sum',{price:$('#'+window.price+'_but').html()}).then((data)=>{
         if(data.data == 'ok'){
             window.location = '/from';
         }else{

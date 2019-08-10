@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS `credit`.`review` (
   `from` VARCHAR(200) NULL,
   `text` TEXT NULL,
   PRIMARY KEY (`id`))
+    DEFAULT CHARACTER SET 'utf8'
 ENGINE = InnoDB;
 
 
@@ -33,6 +34,7 @@ CREATE TABLE IF NOT EXISTS `credit`.`questions` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `email` VARCHAR(100) NULL,
   PRIMARY KEY (`id`))
+   DEFAULT CHARACTER SET 'utf8'
 ENGINE = InnoDB;
 
 DROP TABLE IF EXISTS `credit`.`request` ;
@@ -53,6 +55,7 @@ CREATE TABLE IF NOT EXISTS `credit`.`request` (
   `phone` VARCHAR(1000) NULL,
   `code` INT(10) NULL,
   PRIMARY KEY (`id`))
+  DEFAULT CHARACTER SET 'utf8'
 ENGINE = InnoDB;
 
 
