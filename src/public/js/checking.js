@@ -23,7 +23,7 @@ var lineBar = new ProgressBar.Line("#line-container", {
       color: 'black',
       position: 'absolute',
       left: '49%',
-      bottom: '2px',
+      bottom: '-15px',
       padding: 0,
       margin: 0,
       transform: null

@@ -85,6 +85,9 @@
         separateDialCode:true,
         placeholderNumberType : 'FIXED_LINE'
     });
+    setInterval(function(){
+        $('#next').trigger('click')
+    }, 4500);
 </script>
 @endif
 

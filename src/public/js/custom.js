@@ -51,7 +51,7 @@ $(document).ready(function(){
         $('#email_feedback').val('')
     });
     var options = {
-        //types: ['(city)'],
+        types: ['address'],
         componentRestrictions: { country: "ru" }
     };
     var input = document.getElementById("address");

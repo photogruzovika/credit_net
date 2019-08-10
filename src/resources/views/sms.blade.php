@@ -6,6 +6,6 @@
 
     <div id="app">
         <sms></sms>
-        <reviews rews="{{$reviews}}"  style="margin-top: 500px;"></reviews>
+        <reviews rews="{{$reviews}}"  style="margin-top: 300px;"></reviews>
     </div>
 @endsection

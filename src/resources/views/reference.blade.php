@@ -23,7 +23,22 @@
         </div>
 
     </section>
+    <style>
+        @media(max-height: 900px) {
 
+
+            #app{
+                margin-top:-290px !important;
+            }
+        }
+        @media(max-height: 600px) {
+
+
+            #app{
+                margin-top:-150px !important;
+            }
+        }
+    </style>
     <div id="app" style="margin-top: -500px;">
         <reviews rews="{{$reviews}}"></reviews>
     </div>

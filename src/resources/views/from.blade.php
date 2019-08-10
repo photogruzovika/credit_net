@@ -40,7 +40,22 @@
         </div>
 
     </section>
+<style>
+    @media(max-height: 900px) {
 
+
+        #app{
+            margin-top:-140px !important;
+        }
+    }
+    @media(max-height: 600px) {
+
+
+        #app{
+            margin-top:100px !important;
+        }
+    }
+</style>
     <div id="app" style="margin-top: -350px;">
         <reviews rews="{{$reviews}}"></reviews>
     </div>

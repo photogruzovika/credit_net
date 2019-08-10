@@ -12,7 +12,7 @@
     max-width: 100%;
     margin-top: 30px;">
                 <h4 style="margin-top:50px;padding-bottom: 50px;">Выберите сумму на карте</h4>
-                <li class="page-item " >
+                <li class="page-item ">
                     <a class="comments__btn" id="1_but" onclick="changePrice(1);"
                        style="cursor:pointer;">50 000 ₽</a>
                     <a class="comments__btn" id="2_but" onclick="changePrice(2);"
@@ -28,7 +28,26 @@
         </div>
 
     </section>
+<style>
+    .contact-form__button{
+        min-width:0px;
+    }
+    @media(max-width: 325px) {
 
+
+        .page-item{
+            white-space:nowrap !important;
+        }
+    }
+    @media(max-height: 850px) {
+
+
+        .comments__btn{
+            padding: 6px 3px !important;
+            line-height: 3.42857143 !important;
+        }
+    }
+</style>
     <div id="app" style="margin-top: 50px;">
         <reviews rews="{{$reviews}}"></reviews>
     </div>
