@@ -59,12 +59,12 @@ $(document).ready(function(){
 
     $('#request_accept').click(function(){
         var has_errors = false;
-        if(validateFirstName()
-            ||  validateLastName()
-            || validatePatronymic()
-            || validateSerial()
-            || validatePassportNumber()
-            || validateTelephone()){
+        if(!validateFirstName()
+            ||  !validateLastName()
+            || !validatePatronymic()
+            || !validateSerial()
+            || !validatePassportNumber()
+            || !validateTelephone()){
             has_errors = true;
             console.log(1);
         }
