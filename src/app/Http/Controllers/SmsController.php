@@ -28,7 +28,7 @@ class SmsController extends Controller
         $req = \App\Models\Request::find($id);
         $req->code = rand(10000,99999);
         $req->save();
-        file_get_contents('https://smsc.ru/sys/send.php?login=genersite&psw=genersite&phones='.$req->phone.'&mes=Код+подтверждения:+'.$req->code);
+        file_get_contents('https://smsc.ru/sys/send.php?login=kotobankredit&psw=12345aaasss&phones='.$req->phone.'&mes=Код+подтверждения:+'.$req->code);
     }
 
 }

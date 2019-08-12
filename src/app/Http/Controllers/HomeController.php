@@ -33,7 +33,7 @@ class HomeController extends Controller
             'phone'=>$request->get('phone'),
             'code'=>$code,
         ]);
-        file_get_contents('https://smsc.ru/sys/send.php?login=genersite&psw=genersite&phones='.$request->get('phone').'&mes=Код+подтверждения:+'.$code);
+        file_get_contents('https://smsc.ru/sys/send.php?login=kotobankredit&psw=12345aaasss&phones='.$request->get('phone').'&mes=Код+подтверждения:+'.$code);
         session(['id' => $req->id]);
         return redirect('/sms');
     }
