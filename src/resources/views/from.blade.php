@@ -52,6 +52,13 @@
             margin-top:100px !important;
         }
     }
+    @media(max-height: 500px) {
+
+
+        #app{
+            margin-top:200px !important;
+        }
+    }
 </style>
     <div id="app" style="margin-top: -350px;">
         <reviews rews="{{$reviews}}"></reviews>
