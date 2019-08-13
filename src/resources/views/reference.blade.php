@@ -45,7 +45,7 @@
                 margin-top:50px !important;
             }
         }
-        @media(max-height: 350px) {
+        @media(max-height: 400px) {
 
 
             #app{
