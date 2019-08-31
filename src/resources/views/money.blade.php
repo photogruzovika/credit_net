@@ -7,6 +7,9 @@
         <div class="wrapper">
             <h1 class="money__headline">Деньги в вашем городе!!</h1>
         </div>
-    </section>
 
+    </section>
+    <div id="app">
+        <reviews rews="{{$reviews}}"></reviews>
+    </div>
 @endsection

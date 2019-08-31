@@ -1,6 +1,6 @@
 <template>
-    <section class="comments wow zoomIn" data-wow-duratio="1.5s">
-        <div class="wrapper">
+    <section class="comments wow zoomIn" data-wow-duratio="1.5s" id="reviews">
+        <div class="wrapper" style="text-align:center;">
             <h2 class="comments__headline">Отзывы</h2>
             <div class="comments-wrap" v-for="review in current_reviews">
                 <div class="comments__item">

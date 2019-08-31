@@ -33,19 +33,19 @@
                 <div class="features__icon">
                     <i class="fa fa-external-link"></i>
                 </div>
-                <a class="features__link" href="#">Отзывы</a>
+                <a class="features__link" href="#reviews">Отзывы</a>
             </div>
             <div class="features__item wow zoomIn" data-wow-duration="1.5s">
                 <div class="features__icon">
                     <i class="fa fa-user-secret"></i>
                 </div>
-                <a class="features__link" href="#">Кредитная история не важна</a>
+                <a class="features__link" href="/history">Кредитная история не важна</a>
             </div>
             <div class="features__item wow zoomIn" data-wow-duration="1.5s">
                 <div class="features__icon">
                     <i class="fa fa-line-chart"></i>
                 </div>
-                <a class="features__link" href="#">Процентная ставка</a>
+                <a class="features__link" href="/rate">Процентная ставка</a>
             </div>
         </div>
     </div>

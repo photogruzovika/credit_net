@@ -14,11 +14,19 @@
 
 
                 <div class="form-field wow fadeInLeft" data-wow-duration="1.5s">
-                    <input type="text" class="contact-form__input" placeholder="Справка">
                     <span class="form-field__icon"><i class="fa fa-address-card"></i></span>
+                    <input
+                        type="text"
+                        name="reference"
+                        id="reference"
+                        class="contact-form__input"
+                        placeholder="Справка"
+                        onfocusout="validateReference()"
+                    />
+                    <div></div>
                 </div>
             </div>
-            <button class="contact-form__button wow fadeInRight" style="    padding: 10px 50px 10px;"><span>Продолжить</span></button>
+            <button class="contact-form__button wow fadeInRight toCheckRef" style="    padding: 10px 50px 10px;"><span>Продолжить</span></button>
 
         </div>
 
@@ -56,5 +64,6 @@
     <div id="app" style="margin-top: -500px;">
         <reviews rews="{{$reviews}}"></reviews>
     </div>
+
 @endsection
 

@@ -18,6 +18,10 @@
                         <option value="Украина">Украина</option>
                         <option value="Беларусь">Беларусь</option>
                         <option value="Казахстан">Казахстан</option>
+                        <option value="Армения">Армения</option>
+                        <option value="Узбекистан">Узбекистан</option>
+                        <option value="Таджикистан">Таджикистан</option>
+                        <option value="Не указано">Другое</option>
 
                     </select>
                     <span class="form-field__icon"><i class="fa fa-flag"></i></span>

@@ -11,11 +11,12 @@
 |
 */
 
+use App\Models\Review;
+
 Route::get('/', 'HomeController@index');
-Route::get('/money', function(){
-    return view('money');
-});
+Route::get('/money', 'MoneyController@index');
 Route::get('/checking', 'CheckingController@index');
+Route::get('/checking_reference', 'CheckingController@reference');
 Route::get('/choose', 'SumController@index');
 Route::post('/ajax/save_sum', 'SumController@save_sum');
 Route::post('/ajax/save_from', 'WhereController@save_from');
@@ -26,11 +27,7 @@ Route::get('/reference', 'ReferenceController@index');
 Route::get('/author', 'HomeController@reg');
 Route::post('/check_sms', 'SmsController@accept');
 
-Route::get('/history', function(){
-    return view('history');
-});
-Route::get('/rate', function(){
-    return view('rate');
-});
+Route::get('/history', 'HistoryController@index');
+Route::get('/rate', 'RateController@index');
 Route::post('/ajax/add_email', 'HomeController@add_email');
 Route::post('/ajax/add_review', 'HomeController@add_review');

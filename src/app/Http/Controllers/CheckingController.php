@@ -11,4 +11,8 @@ class CheckingController extends Controller
         $reviews = Review::where('from','=',$request->ip())->orWhere('from','=','all')->orderBy('id','desc')->get()->toArray();
         return view('checking',['reviews'=>json_encode($reviews),'notTel'=>1,'notCust'=>1]);
     }
+    public function reference(Request $request){
+        $reviews = Review::where('from','=',$request->ip())->orWhere('from','=','all')->orderBy('id','desc')->get()->toArray();
+        return view('checking_reference',['reviews'=>json_encode($reviews),'notTel'=>1,'notCust'=>1]);
+    }
 }

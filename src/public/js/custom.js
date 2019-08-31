@@ -38,6 +38,11 @@ if(window.location.pathname == '/'){
 }
 
 $(document).ready(function(){
+    $('.toCheckRef').on('click',function () {
+        if(validateReference()){
+            window.location = "/checking_reference"
+        }
+    });
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -89,7 +94,9 @@ $(document).ready(function(){
 });
 function changePrice(num) {
     $('.comments__btn').removeClass('active');
+    $('.vspliv').css('display','none');
     $('#'+num+'_but').addClass('active');
+    $('.'+num+'_but').css('display','inline-block');
     window.price = num;
 }
 function nextPage(){

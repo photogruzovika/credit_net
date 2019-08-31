@@ -43,6 +43,11 @@ function check1() {
 		duration: 7000
 	}, check2);
 };
+function check4() {
+    document.querySelector('.check__name').innerHTML = 'Идёт анализ кредитной истории';
+   $('.check4').css('display','block');
+
+};
 
 function check2() {
 	document.querySelector('.check__name').innerHTML = 'Идет процесс регистрации';
@@ -58,7 +63,13 @@ function check3() {
 	document.querySelector('#checkBtn').style.display = "block";
 };
 
+if(window.location.pathname == "/checking_reference"){
+    lineBar.animate(1, {
+        duration: 50000,
+    }, check4);
+}else{
+    lineBar.animate(1, {
+        duration: 8000
+    }, check1);
+}
 
-lineBar.animate(1, {
-		duration: 8000
-}, check1);

@@ -37538,12 +37538,12 @@ var render = function() {
     "section",
     {
       staticClass: "comments wow zoomIn",
-      attrs: { "data-wow-duratio": "1.5s" }
+      attrs: { "data-wow-duratio": "1.5s", id: "reviews" }
     },
     [
       _c(
         "div",
-        { staticClass: "wrapper" },
+        { staticClass: "wrapper", staticStyle: { "text-align": "center" } },
         [
           _c("h2", { staticClass: "comments__headline" }, [_vm._v("Отзывы")]),
           _vm._v(" "),

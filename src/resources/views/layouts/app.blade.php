@@ -45,7 +45,7 @@
                         <a href="/rate" class="main-nav__link">Процентная ставка</a>
                     </li>
                     <li class="main-nav__item">
-                        <a href="#" class="main-nav__link">Отзывы</a>
+                        <a href="#reviews" class="main-nav__link">Отзывы</a>
                     </li>
                     <li class="main-nav__item">
                         <a href="/money" class="main-nav__link">Деньги в вашем городе</a>

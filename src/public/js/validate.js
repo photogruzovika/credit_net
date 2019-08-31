@@ -10,6 +10,7 @@ const patronymic = document.getElementById('patronymic');
 const serial = document.getElementById('serial');
 const passportNum = document.getElementById('passportNum');
 const telephone = document.getElementById('telephone');
+const reference = document.getElementById('reference');
 
 // Validators
 function validateFirstName() {
@@ -35,6 +36,22 @@ function validatePassportNumber() {
 function validateTelephone() {
     if (!checkIfEmpty(telephone) && !checkIfLess(telephone,10) && !checkIfMore(telephone,11)) return true;
     return false;
+}
+function validateReference() {
+    if (!checkIfExs(reference)) return true;
+    return false;
+}
+
+function checkIfExs(field){
+    if (field.value.trim() != "1234567" && field.value.trim() != "2345678" && field.value.trim() != "3456789" && field.value.trim() != "4567890" ) {
+
+        setInvalid(field, `Неверный номер справки`);
+        return true;
+    } else {
+
+        setValid(field);
+        return false;
+    }
 }
 
 function checkIfLess(field, much) {

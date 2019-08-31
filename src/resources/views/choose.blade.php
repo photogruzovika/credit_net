@@ -21,7 +21,11 @@
                        style="cursor:pointer;">150 000 ₽</a>
                     <a class="comments__btn" id="4_but" onclick="changePrice(4);"
                        style="cursor:pointer;">200 000 ₽</a>
-                </li>
+                </li><br>
+                <div class="vspliv 1_but" style="display:none;">пятьдесят</div>
+                <div class="vspliv 2_but" style="display:none;">сто</div>
+                <div class="vspliv 3_but" style="display:none;">стопятьдесят</div>
+                <div class="vspliv 4_but" style="display:none;">двести</div>
                 <button class="contact-form__button wow fadeInRight" style="    padding: 10px 50px 10px;" onclick="nextPage();"><span>Продолжить</span></button>
 
             </div>
@@ -29,6 +33,25 @@
 
     </section>
 <style>
+    .vspliv{
+        display: inline-block;
+        margin-top:60px;
+        width: 125px;
+        padding: 8px;
+        border-radius: 4px 4px 4px 4px;
+        font: 14px 'Open Sans', Arial, sans-serif;
+        text-transform: none;
+        text-align: center;
+        color: #fff;
+        background-color: #2f323f;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-animation-name: scaleIn;
+        -webkit-animation-duration: 1s;
+        animation-name: scaleIn;
+        animation-duration: 1s;
+    }
+    }
     .contact-form__button{
         min-width:0px;
     }
