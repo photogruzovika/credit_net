@@ -62,7 +62,7 @@
 
 <section class="request">
     <div class="wrapper">
-        <h2 class="request__headline">Оформить заявку</h2>
+        <h2 class="request__headline" style="text-align:center;">Оформить заявку</h2>
             <div class="contact-form">
                 <div id="formF" class="form-field wow fadeInLeft" data-wow-duration="1.5s">
                     <span class="form-field__icon"><i class="fa fa-user"></i></span>
