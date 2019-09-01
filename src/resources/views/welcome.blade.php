@@ -30,21 +30,30 @@
         <h2 class="features__headline">Удобно для бизнеса</h2>
         <div class="features-wrap">
             <div class="features__item wow zoomIn" data-wow-duration="1.5s">
+                <a href="#reviews">
                 <div class="features__icon">
                     <i class="fa fa-external-link"></i>
                 </div>
+                </a>
                 <a class="features__link" href="#reviews">Отзывы</a>
             </div>
             <div class="features__item wow zoomIn" data-wow-duration="1.5s">
+                <a href="/history">
+
                 <div class="features__icon">
                     <i class="fa fa-user-secret"></i>
                 </div>
+                </a>
+
                 <a class="features__link" href="/history">Кредитная история не важна</a>
             </div>
             <div class="features__item wow zoomIn" data-wow-duration="1.5s">
+                <a href="/rate">
                 <div class="features__icon">
                     <i class="fa fa-line-chart"></i>
                 </div>
+                </a>
+
                 <a class="features__link" href="/rate">Процентная ставка</a>
             </div>
         </div>

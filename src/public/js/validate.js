@@ -26,6 +26,11 @@ function validatePatronymic() {
     return true;
 }
 function validateSerial() {
+    if($('select[name="country"]').val() != "Россия"){
+        setValid(serial);
+
+        return true;
+}
     if (!checkIfEmpty(serial) && !checkIfLess(serial,4) && !checkIfMore(serial,4)) return true;
     return false;
 }
@@ -57,7 +62,7 @@ function checkIfExs(field){
 function checkIfLess(field, much) {
     if (field.value.trim().length < much) {
 
-        setInvalid(field, `Слишком короткое`);
+        setInvalid(field, `Неверное значение`);
         return true;
     } else {
 
@@ -69,7 +74,7 @@ function checkIfLess(field, much) {
 function checkIfMore(field, much) {
     if (field.value.trim().length > much) {
 
-        setInvalid(field, `Слишком длинное`);
+        setInvalid(field, `Неверное значение`);
         return true;
     } else {
 

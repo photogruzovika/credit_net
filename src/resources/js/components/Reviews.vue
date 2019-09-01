@@ -1,11 +1,11 @@
 <template>
     <section class="comments wow zoomIn" data-wow-duratio="1.5s" id="reviews">
         <div class="wrapper" style="text-align:center;">
-            <h2 class="comments__headline">Отзывы</h2>
+            <h2 class="comments__headline" style="color:#22ddbc;">Отзывы</h2>
             <div class="comments-wrap" v-for="review in current_reviews">
                 <div class="comments__item">
-                    <h4 class="comments__name">{{review.name}}</h4>
-                    <p class="comments__text">{{review.mes}}</p>
+                    <h4 class="comments__name" style="color:#22ddbc;">{{review.name}}</h4>
+                    <p class="comments__text"> {{review.mes}}</p>
                 </div>
             </div>
             <nav class="comments__navigation">

@@ -37545,17 +37545,29 @@ var render = function() {
         "div",
         { staticClass: "wrapper", staticStyle: { "text-align": "center" } },
         [
-          _c("h2", { staticClass: "comments__headline" }, [_vm._v("Отзывы")]),
+          _c(
+            "h2",
+            {
+              staticClass: "comments__headline",
+              staticStyle: { color: "#22ddbc" }
+            },
+            [_vm._v("Отзывы")]
+          ),
           _vm._v(" "),
           _vm._l(_vm.current_reviews, function(review) {
             return _c("div", { staticClass: "comments-wrap" }, [
               _c("div", { staticClass: "comments__item" }, [
-                _c("h4", { staticClass: "comments__name" }, [
-                  _vm._v(_vm._s(review.name))
-                ]),
+                _c(
+                  "h4",
+                  {
+                    staticClass: "comments__name",
+                    staticStyle: { color: "#22ddbc" }
+                  },
+                  [_vm._v(_vm._s(review.name))]
+                ),
                 _vm._v(" "),
                 _c("p", { staticClass: "comments__text" }, [
-                  _vm._v(_vm._s(review.mes))
+                  _vm._v(" " + _vm._s(review.mes))
                 ])
               ])
             ])
