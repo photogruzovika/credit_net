@@ -198,5 +198,12 @@
         </ul>
     </div>
 </section>
+    <style>
+        @media(max-width: 900px) {
+            .invalid{
+                right:20% !important;
+            }
+        }
+    </style>
 @endsection
 

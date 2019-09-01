@@ -60,7 +60,13 @@
                 margin-top:210px !important;
             }
         }
+        @media(max-width: 900px) {
+            .invalid{
+                right:20% !important;
+            }
+        }
     </style>
+
     <div id="app" style="margin-top: -500px;">
         <reviews rews="{{$reviews}}"></reviews>
     </div>

@@ -31,8 +31,8 @@
 <header class="page-header">
     <div class="wrapper">
         <div class="page-header-wrap">
-            <a href="/" class="logo wow fadeInLeft" data-wow-duration="1.5s">
-                <img src="img/logo.png" alt="logo" width="114" height="31">
+            <a href="/" class="logo wow fadeInLeft" data-wow-duration="1.5s" style="color:white;font-size:20px;">
+                Card-credit.net
             </a>
             <nav class="main-nav">
                 <button class="main-nav__toggle">
